@@ -1,12 +1,27 @@
-import React from 'react';
+import React from 'react'
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import { BrowserRouter, Route } from 'react-router-dom';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import App from './components/App';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+class Hello extends React.Component {
+    render(){
+        return <div>Hello</div>
+    }
+}
+
+class Goodbye extends React.Component {
+    render(){
+        return <div>Goodbye</div>
+    }
+}
+
+ReactDOM.render(
+    <BrowserRouter>
+        <div>
+            <Route path="/hello" component={Hello} />
+            <Route path="/goodbye" component={Goodbye} />
+        </div>
+    </BrowserRouter>,
+    document.querySelector('#root')
+ );
