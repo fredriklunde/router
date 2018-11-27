@@ -4,9 +4,10 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import promise from 'redux-promise';
 import { BrowserRouter, Route } from 'react-router-dom';
-import PostIndex from './components/PostIndex'
 
 import reducers from './reducers';
+import PostIndex from './components/PostIndex'
+import PoststNes from './components/PostsNew'
 
 const createStoreWithMiddleware = applyMiddleware(
   promise,
@@ -19,6 +20,7 @@ ReactDOM.render(
         <BrowserRouter>
             <div>
                 <Route path="/" component={PostIndex} />
+                <Route path="/posts/new" component={PoststNes} />
             </div>
         </BrowserRouter>
   </Provider>

@@ -28,7 +28,6 @@ class PostIndex extends React.Component {
                 <ul className="list-group">
                     {this.renderPosts()}
                 </ul>
-                PostIndex
             </div>
         );
     };
