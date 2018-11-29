@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import rootReducer from './reducers';
 import PostIndex from './components/PostIndex'
 import PoststNes from './components/PostsNew'
+import Postshow from './components/PostShow'
 
 const createStoreWithMiddleware = applyMiddleware(
   promise,
@@ -22,6 +23,7 @@ ReactDOM.render(
                 <Switch>
                     <Route path="/" exact component={PostIndex} />
                     <Route path="/posts/new" component={PoststNes} />
+                    <Route path="/posts/:id" component={Postshow} />
                 </Switch>
             </div>
         </BrowserRouter>
