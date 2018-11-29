@@ -3,15 +3,19 @@ import { Field, reduxForm } from 'redux-form';
 
 class PostsNew extends React.Component {
     renderField(field){
+        const { meta: { touched, error }} = field;
+        const validation = `${error && touched ? 'is-invalid' : 'is-valid'}`
         return(
             <div className="form-group">
                 <label>{field.label}</label>
                 <input
-                    className="form-control"
+                    className={`form-control ${touched ? validation : ''}`}
                     type={field.text}
                     {...field.input}
                 />
-                {field.meta.touched ? field.meta.error : ''}
+                <div className="text-help">
+                    {touched ? error : ''}
+                </div>
             </div>
         )
     }
