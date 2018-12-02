@@ -1,4 +1,4 @@
-<iframe src='https://gfycat.com/ifr/ShockingEminentEarwig' frameborder='0' scrolling='no' allowfullscreen width='640' height='410'></iframe>
+![Screen](https://thumbs.gfycat.com/ShockingEminentEarwig-small.gif)
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
